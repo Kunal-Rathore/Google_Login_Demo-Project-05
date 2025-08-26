@@ -11,8 +11,10 @@ require("./db/db");
 const app = express();
 const PORT = process.env.PORT;
 
+const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";
+const clientUrl = "https://google-login-demo-project-05-fronte.vercel.app";
 app.use(cors({
-    origin: "",
+    origin: [clientUrl, "http://localhost:5500"],
     credentials: true
 }))
 
@@ -25,8 +27,6 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";
-const clientUrl = "https://google-login-demo-project-05-fronte.vercel.app";
 
 passport.use(
     new OAuth2Strategy({
