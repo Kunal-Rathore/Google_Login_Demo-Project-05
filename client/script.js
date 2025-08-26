@@ -1,11 +1,11 @@
 
-const serverUrl = "";
+const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";
 
 async function checkLoggedIn() {
     console.log("called")
     const response = await axios({
         withCredentials: true,
-        url: "http://localhost:3000/isloggedin"
+        url: `${serverUrl}/isloggedin`
     });
     if (response.status === 200) {
         const userData = response.data.userData;
@@ -19,7 +19,7 @@ async function checkLoggedIn() {
             <div class="username">Hello, ${username}</div>
             <li class="googleLink_and_googleLogo">
               
-            <a href="http://localhost:3000/logout" class="LogoutLink">
+            <a href= "${serverUrl}/logout" class="LogoutLink">
             
             <div class="logOut_text"> Logout of Google Account </div>
             

@@ -83,9 +83,9 @@ OAuth/
 
 ```bash
 
-git clone  <your-repo-url>
+git clone  https://github.com/Kunal-Rathore/Google_Login_Demo-Project-05.git
 
-cd <your-repo-folder>
+cd Google_Login_Demo-Project-05
 
 npm install
 
