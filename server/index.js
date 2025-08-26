@@ -95,6 +95,10 @@ app.get('/isloggedin', (req, res, next) => {  // used to manipulate DOM to load 
     return res.status(404).json({ isLoggedIn: false });
 })
 
+app.get("/", (req, res) => {
+    res.json({ message: "Server running" });
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server running on Port- ${PORT}`);
