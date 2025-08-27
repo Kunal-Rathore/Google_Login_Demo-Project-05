@@ -11,6 +11,7 @@ require("./db/db");
 const app = express();
 const PORT = process.env.PORT;
 
+// need to change both for development 
 const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";
 const clientUrl = "https://google-login-demo-project-05-fronte.vercel.app";
 app.use(cors({
@@ -22,7 +23,11 @@ app.use(cors({
 app.use(session({
     secret: "SomethingCrazy",
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        sameSite: false,
+        secure: true, // for production true
+    }
 }));
 
 app.use(passport.initialize());
@@ -69,7 +74,7 @@ app.get('/auth/google', passport.authenticate("google", {
 }));
 
 app.get('/google/callback', passport.authenticate("google", {
-    successRedirect: clientUrl,
+    successRedirect: `${clientUrl}`,
     failureRedirect: "/auth/google"
 }));
 
