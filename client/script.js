@@ -4,9 +4,9 @@ const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";     
 async function checkLoggedIn() {
     console.log("called")
     const response = await axios({
-        withCredentials: true,
+        method: "GET",
         url: `${serverUrl}/isloggedin`,
-        method: GET
+        withCredentials: true,
     });
     if (response.status === 200) {
         const userData = response.data.userData;

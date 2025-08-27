@@ -38,7 +38,6 @@ passport.use(
     new OAuth2Strategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-
         callbackURL: `${serverUrl}/google/callback`
     },
         async (accessToken, refreshToken, profile, done) => {
