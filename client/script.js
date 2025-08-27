@@ -1,5 +1,5 @@
 
-const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";
+const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";     //need to change for development
 
 async function checkLoggedIn() {
     console.log("called")
