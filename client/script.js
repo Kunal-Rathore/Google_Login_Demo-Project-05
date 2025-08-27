@@ -5,7 +5,8 @@ async function checkLoggedIn() {
     console.log("called")
     const response = await axios({
         withCredentials: true,
-        url: `${serverUrl}/isloggedin`
+        url: `${serverUrl}/isloggedin`,
+        method: GET
     });
     if (response.status === 200) {
         const userData = response.data.userData;

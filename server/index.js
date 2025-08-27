@@ -14,6 +14,7 @@ const PORT = process.env.PORT;
 // need to change both for development 
 const serverUrl = "https://google-login-demo-project-05-backen.vercel.app";
 const clientUrl = "https://google-login-demo-project-05-fronte.vercel.app";
+
 app.use(cors({
     origin: [clientUrl, "http://localhost:5500"],
     credentials: true
@@ -37,6 +38,7 @@ passport.use(
     new OAuth2Strategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+
         callbackURL: `${serverUrl}/google/callback`
     },
         async (accessToken, refreshToken, profile, done) => {
