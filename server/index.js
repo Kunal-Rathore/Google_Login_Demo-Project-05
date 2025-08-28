@@ -28,7 +28,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         sameSite: "none",
-        secure: true, // for production true
+        secure: true, // for production true, and for development need to set to false for HTTP requests
     }
 }));
 
