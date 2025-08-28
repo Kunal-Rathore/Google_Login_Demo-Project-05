@@ -16,7 +16,7 @@ A complete Google OAuth authentication system built with Node.js, Express, and M
 
 ## 📁 Project Structure
 ```text
-OAuth/
+Google_Login_Demo-Project-05/
 ├── client/
 │   ├── index.html
 │   ├── script.js
