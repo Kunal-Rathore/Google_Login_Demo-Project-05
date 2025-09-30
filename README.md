@@ -1,5 +1,7 @@
 # Google OAuth Authentication System
 A complete Google OAuth authentication system built with Node.js, Express, and MongoDB. It allows users to log in with their Google accounts and provides session-based authentication with logout functionality and a minimal responsive frontend.
+
+---
 URL: https://google-login-demo-project-05-fronte.vercel.app/
 
 ---
